@@ -1,4 +1,4 @@
-from __future__ import print_function
+Tfrom __future__ import print_function
 # -*- coding: utf-8 -*-
 import sys
 from operator import add
