@@ -12,7 +12,7 @@ def rdd_check(x):
    else:
       try:
         val=str(x)
-        return x,"PLAIN TEXT","OFFENSE DESCRIPTION","VALID"
+        return x,"TEXT","OFFENSE DESCRIPTION","VALID"
       except:
         return x,"OTHER","OTHER","INVALID"
 
