@@ -4,7 +4,7 @@ from csv import reader
 import sys
 import re
 import datetime
-def validity(x):
+def check(x):
         if x is "NULL" or x is "":
                 return "  NULL  ","NULL","  OTHER ","NULL"
         else :
@@ -14,5 +14,6 @@ if __name__ == "__main__":
    date = sc.textFile(sys.argv[1], 1)
    header = date.first() #extract header
    date = date.filter(lambda x : x!= header)
-   date = date.mapPartitions(lambda x: reader(x)).map(lambda x: '%s\t%s\t%s\t%s'%(validity(x[10])))
+   date = date.mapPartitions(lambda x: reader(x)) \
+	.map(lambda x: '%s\t%s\t%s\t%s'%(check(x[10])))
    date.saveAsTextFile('crimeattempt.out')                          
