@@ -17,7 +17,7 @@ def validity(x):
                minute= int(x[1])
                try:  
                    newTime= datetime.datetime.strptime(y,"%H:%M:%S")
-                   return y,"Time","Time of the event","VALID"
+                   return y,"DateTime","Time of the event","VALID"
                except  ValueError :
                     return y,"OTHER","     OTHER      ","INVALID"
                
