@@ -4,6 +4,6 @@ import csv
 from csv import reader
 
 
-df = pd.read_csv('PrecpBig.csv')
-x=df['OFNS_DESC'].corr(df['Temp'],method='spearman')
+df = pd.read_csv('Big5.csv')
+x=df['Ofns_Desc'].corr(df['Contri_Fact_1'],method='spearman')
 print (x)
